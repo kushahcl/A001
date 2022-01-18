@@ -27,5 +27,9 @@ pipeline{
       }
     
   }      
- 
+  post{
+    always{
+    emailext body: '', subject: 'Build/fail or sucess', to: 'lenovauser@gmail.com'
+    }
+  }
 }
